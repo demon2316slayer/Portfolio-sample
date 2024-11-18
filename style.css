@@ -1,0 +1,827 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+
+}
+.navbar{
+ 
+
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color:#ECF0F1;
+    color:#2C3E50;
+
+}
+
+.navbar p{
+    text-decoration: underline;
+    margin-left: 3em;
+}
+
+.hamburger
+{
+    background: none;
+    border: none;
+    margin-right: 3em;
+  
+}
+.hamburger :hover{
+    cursor: pointer;
+}
+
+/*Desigining the proper dropdown  menu*/
+.menu {
+    display: none; /* Initially hide the menu */
+    position: absolute;
+    top: 3.75em;
+    right: 0;
+    width: 12.5em;
+    background-color: rgba(0, 21, 36, 0.85); /* Transparent background */
+    color: #ECF0F1;
+    padding: 1em;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    opacity: 0; /* Start with opacity 0 (invisible) */
+    transform: translateY(-10px); /* Start slightly above */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+}
+
+.menu a {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: #ECF0F1;
+    font-size: 1.2em;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 125, 0, 0.8); /* Slightly transparent hover background */
+}
+
+/* Visible menu state */
+.menu.show {
+    display: block; /* Make the menu visible */
+    opacity: 1; /* Fade in by changing opacity to 1 */
+    transform: translateY(0); /* Move the menu to its normal position */
+}
+
+
+/*Till here Navbar styling*/
+
+/*Now to create other sections*/
+
+/*Hero Section*/
+
+.Hero{
+  background-color: #2C3E50;
+  color:#ECF0F1;
+ display: flex;
+ justify-content: space-between;
+ padding: 5em;
+ gap: 5em;
+}
+
+.name1{
+
+    margin-left: 2.5em;
+    padding: 3em;
+    line-height: 1.5;
+    border: 2px solid;
+    border-radius: 1em;
+}
+
+.name1 p{
+     font-size: 2rem;
+
+}
+#hello{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+}
+
+#name{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+}
+
+
+.imgcontainer {
+    width: 80%;  /* Allows the container to take up 80% of the available space */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+
+
+.imgcontainer img{
+    width: 100%;
+    border-radius: 5px;
+  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Removes extra space below the image */
+    min-width: 12.5em; 
+   
+}
+
+/*Now think of next section*/
+  .main{
+    background-color: #ECF0F1;
+    color:#E74C3C;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+
+    .strenght {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2.5rem;
+        margin-left: 2.5em;
+        text-decoration: underline;
+        padding: 1em; /* Add padding */
+    }
+    
+
+.strenght h2{
+    margin-left: 2.5em;
+    text-decoration: underline;
+  
+}
+
+.str2{
+    display: flex;
+    margin: 2em; /* Added margin for spacing around the container */
+    padding: 2em; /* Added padding for spacing within the container */
+    gap: 2em; /* Increased gap between each box */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+ }
+
+.str2 h2{
+    text-decoration: underline;
+    font-size: 2.5rem;
+}
+
+.str2 p{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+.str3, .str4, .str5 {
+    padding: 1em;
+    margin: 1em; /* Adds spacing around each strength box */
+    flex: 1; /* Ensures equal width for each box within the flex container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow for a more refined look */
+}
+
+/*Done with this section*/
+/*Adding Animation now*/
+
+/*Appearence Animation*/
+/* Define the appearance animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9) rotate(10deg);  /* Slight scale and rotation */
+        filter: blur(5px);  /* Initial blur effect */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0);  /* Back to normal */
+        filter: blur(0);  /* Clear the blur */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow when visible */
+    }
+}
+
+/* Define the disappearance animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0);
+        filter: blur(0);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow when visible */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9) rotate(10deg);  /* Slight scale and rotation */
+        filter: blur(5px);  /* Apply blur when disappearing */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow when invisible */
+    }
+}
+
+/* Initial state for the elements */
+.str3, .str4, .str5 {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9) rotate(10deg);  /* Slight scale and rotation */
+    filter: blur(5px);  /* Initial blur */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    color: #aaa;  /* Faded color initially */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, filter 0.6s ease-in-out, box-shadow 0.6s ease-in-out, color 0.8s ease-in-out;  /* Smooth transitions for multiple properties */
+}
+
+/* When visible, apply the fade-in effect */
+.str3.visible, .str4.visible, .str5.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);  /* Back to normal */
+    filter: blur(0);  /* Clear the blur */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow when visible */
+    color: #E74C3C;  /* Bright color when visible */
+}
+
+/* Optional: Add hover effect (if you want additional interaction on hover) */
+.str3:hover, .str4:hover, .str5:hover {
+    transform: scale(1.05);  /* Slight zoom in on hover */
+    transition: transform 0.3s ease;  /* Smooth zoom on hover */
+}
+
+/*About Section with above style*/
+.project1{
+    background-color:#2C3E50;
+    color: #ECF0F1;
+   
+    
+}
+
+/* Project Section */
+.project1 {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 2rem 0;  /* Using rem for padding */
+    text-align: center;
+}
+
+.project1 h2 {
+    margin-bottom: 2rem;  /* Using rem for spacing */
+    font-size: 2.5rem;  /* Font size with rem for scaling */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+}
+
+/* Grid layout for project showcase */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Use rem for width in grid */
+    gap: 2rem; /* Use rem for gap */
+    padding: 0 2rem; /* Padding with rem */
+}
+
+/* Individual project item */
+.project-item {
+    background-color:#ECF0F1;
+    border-radius: 0.625rem; /* Border radius using rem */
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Shadow with rem */
+    padding: 1rem;  /* Padding with rem */
+    text-align: center;
+    transition: transform 0.3s ease;
+ 
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem; /* Border radius for images with rem */
+    margin-bottom: 1rem;  /* Spacing with rem */
+}
+
+.project-item p {
+    font-size: 1.5rem;  /* Font size with rem */
+    color:#E74C3C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/*Information Section*/
+.education{
+    background:linear-gradient(to bottom, rgba(200, 200, 200, 0.8), rgba(207, 103, 103, 0.399) 90%);;
+    color: #2C3E50;
+}
+.education h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+   text-decoration: underline;
+   padding: 1em;
+}
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 2em; /* Space between grid items */
+    justify-items: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items vertically */
+    max-width: 800px;
+    margin: auto; /* Center the entire grid container */
+    padding: 2em; /* Padding for the entire grid container */
+   /* background: linear-gradient(to bottom, rgba(200, 200, 200, 0.8), rgba(207, 103, 103, 0.399) 90%);*/
+    position: relative; /* Ensures grid-items overlay this background */
+    border-radius: 1em; /* Round the corners of the entire grid section */
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for each item */
+    color: #2C3E50;
+    padding: 2em;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9) rotate(10deg);
+    filter: blur(5px);
+    color: #aaa;
+    transition: opacity 1s ease, transform 1s ease, box-shadow 0.8s ease, color 0.8s ease;
+    transition-delay: 0s;
+}
+
+.grid-item.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+    filter: blur(0);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    color: #2C3E50;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.grid-item h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+}
+
+.grid-item p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/*work done sumaary*/
+.container{
+    background-color: #2C3E50;
+    color: #E74C3C;
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    padding: 3em;
+}
+.learn{
+    background-color: #E74C3C;
+    color: #2C3E50;
+    padding: 0.5em;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+.learn:hover{
+    background-color: white;
+    color: #E74C3C;
+}
+
+/*Lets design final*/
+.contact{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #E74C3C;
+}
+#box{
+    border: none;
+}
+
+.first{
+  
+    background-color:#ECF0F1;
+    color: #2C3E50;
+    text-align: left;
+    padding: 2.5em;
+     line-height: 2.5;
+     width:50%;
+    
+    
+}
+.first h2{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+}
+#para1{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+}
+#para2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2rem;
+}
+#head3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+#para3{
+   color: gray;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.5rem;
+}
+.second{
+    width: 50%;
+    
+    background-color: #2C3E50;
+    color: #E74C3C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1.5em;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+#first1,#first2,#message{
+    padding: 1.5em;
+    width: 80%;
+    border: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ECF0F1; /* Green underline */
+   
+}  
+
+label{
+    display: block;
+}
+.submit{
+    display: block;
+    background-color: #E74C3C;
+    color: #2C3E50;
+    padding: 0.5em;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+
+}
+.submit:hover{
+    background-color: white;
+    color: #E74C3C;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    text-align: center;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #E74C3C, #ff9a44, #E74C3C);
+}
+
+.footer p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 1.5em;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 1em;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Mobile-First Media Queries - Add these at the end of your CSS file */
+
+/* Base mobile styles (phones, 576px and down) */
+@media screen and (max-width: 576px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.5em;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar p {
+        font-size: 1rem;
+        margin-left: 0.5em;
+    }
+
+    .menu {
+        width: 100%;
+        left: 0;
+        top: 3.5em;
+        padding: 0.5em;
+    }
+
+    .menu a {
+        padding: 1em;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hero Section */
+    .Hero {
+        flex-direction: column;
+        padding: 1em;
+        margin-top: 4em; /* Add space for fixed navbar */
+        gap: 1em;
+    }
+
+    .name1 {
+        margin: 0;
+        padding: 1em;
+        text-align: center;
+        border: none;
+    }
+
+    #hello {
+        font-size: 1.5rem;
+        margin-bottom: 0.5em;
+    }
+
+    #name {
+        font-size: 2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .imgcontainer {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Strengths Section */
+    .strenght {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .strenght h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .str2 {
+        margin: 0;
+        padding: 1em;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .str3, .str4, .str5 {
+        margin: 0 0 1em 0;
+        padding: 1em;
+    }
+
+    .str2 h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5em;
+    }
+
+    .str2 p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Project Section */
+    .project1 h2 {
+        font-size: 1.5rem;
+        margin: 1em 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .project-item {
+        margin: 0 0 1em 0;
+    }
+
+    .project-item p {
+        font-size: 1rem;
+    }
+
+    /* Education Section */
+    .education h2 {
+        font-size: 1.5rem;
+        padding: 1em;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .grid-item {
+        padding: 1em;
+        margin: 0 0 1em 0;
+    }
+
+    .grid-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .grid-item p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Container Section */
+    .container {
+        font-size: 1.2rem;
+        padding: 1.5em 1em;
+        text-align: center;
+    }
+
+    .learn {
+        font-size: 1rem;
+        padding: 0.8em 1.5em;
+        margin-top: 1em;
+    }
+}
+    /* Contact Section */
+
+   /* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        padding: 2em 1em;
+    }
+
+    .first, .second {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 2em;
+    }
+
+    .first {
+        margin-bottom: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .second {
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .first h2 {
+        font-size: 2rem;
+    }
+
+    .first h3 {
+        font-size: 1.5rem;
+    }
+
+    .input-group label {
+        font-size: 0.9rem;
+    }
+
+    .submit {
+        width: 100%;
+        padding: 0.8em;
+    }
+}
+
+/* Fix for very small devices */
+@media screen and (max-width: 320px) {
+    .navbar p {
+        font-size: 0.9rem;
+    }
+
+    #name {
+        font-size: 1.5rem;
+    }
+
+    .strenght {
+        font-size: 1.3rem;
+    }
+
+    .str2 h2 {
+        font-size: 1.2rem;
+    }
+
+    .str2 p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional Fixes */
+@media screen and (max-width: 576px) {
+    /* Prevent horizontal scrolling */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Fix padding issues */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Improve tap targets */
+    button, 
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Improve form usability */
+    input, 
+    textarea {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add smooth scrolling for all screen sizes */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Call-to-Action Button Styles */
+.cta-container {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #E74C3C;
+    color: #ECF0F1;
+    font-size: 1.5rem;
+    padding: 0.8em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #C0392B;
+    transform: scale(1.05);
+}
